@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Kuliah\\Semester 5\\android_TA\\BottomNavBar-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-vi\\values-vi.xml",
+            "outputFile": "D:\\Kuliah\\Semester 6\\TUGAS AKHIR\\apk\\BottomNavBar-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-vi\\values-vi.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ACER\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\5680f64b61f4b52bdea43bf52c63df70\\res\\values-vi\\values-vi.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,219,327,436,520,623,742,819,896,980,1084,1193,1294,1399,1513,1618,1775,1874",
-                        "endColumns": "113,107,108,83,102,118,76,76,83,103,108,100,104,113,104,156,98,83",
-                        "endOffsets": "214,322,431,515,618,737,814,891,975,1079,1188,1289,1394,1508,1613,1770,1869,1953"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\ACER\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\962e0a902b97dd2e6960c172ae99f01d\\res\\values-vi\\values-vi.xml",
+                    "source": "C:\\Users\\ACER\\.gradle\\caches\\transforms-2\\files-2.1\\d694d7513e1ca99c176cc55df91d4662\\support-compat-27.1.1\\res\\values-vi\\values-vi.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,11 +13,45 @@
                         "endOffsets": "151"
                     },
                     "to": {
-                        "startLines": "20",
+                        "startLines": "41",
                         "startColumns": "4",
-                        "startOffsets": "1958",
+                        "startOffsets": "4636",
                         "endColumns": "100",
-                        "endOffsets": "2054"
+                        "endOffsets": "4732"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\ACER\\.gradle\\caches\\transforms-2\\files-2.1\\34555d386a7eb9ea3045ff1382069509\\appcompat-v7-27.1.1\\res\\values-vi\\values-vi.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,219,327,436,520,623,742,819,896,980,1084,1193,1294,1399,1513,1618,1775,1874",
+                        "endColumns": "113,107,108,83,102,118,76,76,83,103,108,100,104,113,104,156,98,83",
+                        "endOffsets": "214,322,431,515,618,737,814,891,975,1079,1188,1289,1394,1508,1613,1770,1869,1953"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,38",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,219,327,436,520,623,742,819,896,980,1084,1193,1294,1399,1513,1618,1775,4371",
+                        "endColumns": "113,107,108,83,102,118,76,76,83,103,108,100,104,113,104,156,98,83",
+                        "endOffsets": "214,322,431,515,618,737,814,891,975,1079,1188,1289,1394,1508,1613,1770,1869,4450"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\ACER\\.gradle\\caches\\transforms-2\\files-2.1\\995edecb751ea89700668a85a9f642cf\\sdk-base-1.10.0\\res\\values-vi\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "258,352,424,502,609,808,956,1089,1170,1285,1390,1495,1578,1815,2056,2158,2266,2377,2513,2683,2781,2856,2942",
+                        "endColumns": "93,71,77,106,198,147,132,80,114,104,104,82,236,240,101,107,110,135,169,97,74,85,97",
+                        "endOffsets": "351,423,501,608,807,955,1088,1169,1284,1389,1494,1577,1814,2055,2157,2265,2376,2512,2682,2780,2855,2941,3039"
+                    },
+                    "to": {
+                        "startLines": "19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,39,40,42,43",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1874,1972,2048,2130,2241,2444,2596,2733,2818,2937,3046,3155,3242,3483,3728,3834,3946,4061,4201,4455,4557,4737,4827",
+                        "endColumns": "97,75,81,110,202,151,136,84,118,108,108,86,240,244,105,111,114,139,169,101,78,89,101",
+                        "endOffsets": "1967,2043,2125,2236,2439,2591,2728,2813,2932,3041,3150,3237,3478,3723,3829,3941,4056,4196,4366,4552,4631,4822,4924"
                     }
                 }
             ]

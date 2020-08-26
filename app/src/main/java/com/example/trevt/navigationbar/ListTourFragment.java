@@ -1,5 +1,6 @@
 package com.example.trevt.navigationbar;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -11,25 +12,42 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ListAdapter;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.trevt.navigationbar.API_LOGIN.APIList;
+import com.example.trevt.navigationbar.API_LOGIN.WisatawanListt;
+import com.example.trevt.navigationbar.Adapter.Wisata_adapter;
 import com.example.trevt.navigationbar.DetailWisata.Detail_wisata;
+import com.example.trevt.navigationbar.Login.activity_signinn;
+import com.example.trevt.navigationbar.Login.activity_signup;
+import com.example.trevt.navigationbar.ModelWisata.Wisata;
+import com.example.trevt.navigationbar.ModelWisata.WisataList;
 import com.example.trevt.navigationbar.isidata.Datawisata;
 import com.example.trevt.navigationbar.isidata.isi;
 
+import java.lang.reflect.Array;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class ListTourFragment extends Fragment {
 
-    private TextView mTextViewEmpty;
-    private ProgressBar mProgressBarLoading;
-    private ImageView mImageViewEmpty;
+//    private TextView mTextViewEmpty;
+//    private ProgressBar mProgressBarLoading;
+//    private ImageView mImageViewEmpty;
+    private Wisata_adapter wisata_adapter;
+    private List<Wisata> data = new ArrayList<>();
     private RecyclerView mRecyclerView;
-    private ListAdapter mListadapter;
+    Context mContext;
+
 
     @Nullable
     @Override
@@ -37,14 +55,15 @@ public class ListTourFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_listtour, container, false);
 
         mRecyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
-        mTextViewEmpty = (TextView) view.findViewById(R.id.textViewEmpty);
-        mImageViewEmpty = (ImageView) view.findViewById(R.id.imageViewEmpty);
-        mProgressBarLoading = (ProgressBar) view.findViewById(R.id.progressBarLoading);
+//        mTextViewEmpty = (TextView) view.findViewById(R.id.textViewEmpty);
+//        mImageViewEmpty = (ImageView) view.findViewById(R.id.imageViewEmpty);
+//        mProgressBarLoading = (ProgressBar) view.findViewById(R.id.progressBarLoading);
 
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(layoutManager);
 
+        getallwisata();
         ArrayList data = new ArrayList<Datawisata>();
         for (int i = 0; i < isi.nawawisata.length; i++) {
             data.add(
@@ -55,17 +74,55 @@ public class ListTourFragment extends Fragment {
                                     isi.gambar[i]
                             ));
         }
-        mListadapter = new ListAdapter(data);
-        mRecyclerView.setAdapter(mListadapter);
-
+//        mListadapter = new ListAdapter(data);
+//        mRecyclerView.setAdapter(mListadapter);
+//
         return view;
 
     }
 
-    public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
-        private ArrayList<Datawisata> dataList;
+    private void getallwisata() {
 
-        public ListAdapter(ArrayList<Datawisata> data) {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(APIList.URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        APIList api = retrofit.create(APIList.class);
+        Call<WisataList> call = api.getallWisata();
+        call.enqueue(new Callback<WisataList>() {
+            @Override
+            public void onResponse(Call<WisataList> call, Response<WisataList> response) {
+//                        Integer status = response.body().getStatus();
+//                        boolean error = response.body().isError();
+//                        String message = response.body().getMessage();
+
+                //progress.dismiss();
+//                        Log.d("test", "Errronya " + error);
+                if (response.code() == 200){
+                    data = response.body().getWisata();
+                    wisata_adapter = new Wisata_adapter(getActivity(), data);
+                    mRecyclerView.setAdapter(wisata_adapter);
+                } else {
+
+                }
+            }
+
+//
+
+
+            @Override
+            public void onFailure(Call<WisataList> call, Throwable t) {
+                //progress.dismiss();
+                //progress.dismiss();
+                //progress.dismiss();
+            }
+        });
+    }
+
+    public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
+        private ArrayList<Wisata> dataList;
+
+        public ListAdapter(ArrayList<Wisata> data) {
             this.dataList = data;
         }
 
@@ -96,9 +153,9 @@ public class ListTourFragment extends Fragment {
 
         @Override
         public void onBindViewHolder(ListAdapter.ViewHolder holder, final int position) {
-            holder.txtViewnamawisata.setText(dataList.get(position).getNamawisata());
-            holder.txtViewdeskripsi.setText(dataList.get(position).getDeskripsi());
-            holder.imageViewGambar.setImageResource(dataList.get(position).getGambar());
+            holder.txtViewnamawisata.setText(dataList.get(position).getNamaWisata());
+            holder.txtViewdeskripsi.setText(dataList.get(position).getAlamatWisata());
+//            holder.imageViewGambar.setImageResource(dataList.get(position).getFotoWisata());
 
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

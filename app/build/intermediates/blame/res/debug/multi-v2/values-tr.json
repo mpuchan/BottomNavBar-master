@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Kuliah\\Semester 5\\android_TA\\BottomNavBar-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-tr\\values-tr.xml",
+            "outputFile": "D:\\Kuliah\\Semester 6\\TUGAS AKHIR\\apk\\BottomNavBar-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-tr\\values-tr.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ACER\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\962e0a902b97dd2e6960c172ae99f01d\\res\\values-tr\\values-tr.xml",
+                    "source": "C:\\Users\\ACER\\.gradle\\caches\\transforms-2\\files-2.1\\d694d7513e1ca99c176cc55df91d4662\\support-compat-27.1.1\\res\\values-tr\\values-tr.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -13,21 +13,45 @@
                         "endOffsets": "151"
                     },
                     "to": {
-                        "startLines": "20",
+                        "startLines": "41",
                         "startColumns": "4",
-                        "startOffsets": "1924",
+                        "startOffsets": "4532",
                         "endColumns": "100",
-                        "endOffsets": "2020"
+                        "endOffsets": "4628"
                     }
                 },
                 {
-                    "source": "C:\\Users\\ACER\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\5680f64b61f4b52bdea43bf52c63df70\\res\\values-tr\\values-tr.xml",
+                    "source": "C:\\Users\\ACER\\.gradle\\caches\\transforms-2\\files-2.1\\34555d386a7eb9ea3045ff1382069509\\appcompat-v7-27.1.1\\res\\values-tr\\values-tr.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
                         "startOffsets": "105,210,309,421,506,612,732,811,887,966,1073,1178,1274,1381,1483,1591,1747,1845",
                         "endColumns": "104,98,111,84,105,119,78,75,78,106,104,95,106,101,107,155,97,78",
                         "endOffsets": "205,304,416,501,607,727,806,882,961,1068,1173,1269,1376,1478,1586,1742,1840,1919"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,38",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,210,309,421,506,612,732,811,887,966,1073,1178,1274,1381,1483,1591,1747,4278",
+                        "endColumns": "104,98,111,84,105,119,78,75,78,106,104,95,106,101,107,155,97,78",
+                        "endOffsets": "205,304,416,501,607,727,806,882,961,1068,1173,1269,1376,1478,1586,1742,1840,4352"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\ACER\\.gradle\\caches\\transforms-2\\files-2.1\\995edecb751ea89700668a85a9f642cf\\sdk-base-1.10.0\\res\\values-tr\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "258,348,422,505,610,807,952,1070,1150,1252,1355,1460,1540,1795,2019,2114,2218,2325,2456,2619,2717,2786,2870",
+                        "endColumns": "89,73,82,104,196,144,117,79,101,102,104,79,254,223,94,103,106,130,162,97,68,83,95",
+                        "endOffsets": "347,421,504,609,806,951,1069,1149,1251,1354,1459,1539,1794,2018,2113,2217,2324,2455,2618,2716,2785,2869,2965"
+                    },
+                    "to": {
+                        "startLines": "19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,39,40,42,43",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1845,1939,2017,2104,2213,2414,2563,2685,2769,2875,2982,3091,3175,3434,3662,3761,3869,3980,4115,4357,4459,4633,4721",
+                        "endColumns": "93,77,86,108,200,148,121,83,105,106,108,83,258,227,98,107,110,134,162,101,72,87,99",
+                        "endOffsets": "1934,2012,2099,2208,2409,2558,2680,2764,2870,2977,3086,3170,3429,3657,3756,3864,3975,4110,4273,4454,4527,4716,4816"
                     }
                 }
             ]

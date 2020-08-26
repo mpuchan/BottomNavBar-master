@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.trevt.navigationbar">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,10 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".tampilan360"></activity>
-        <activity android:name=".DetailWisata.Detail_wisata" />
+        <activity android:name=".Login.activity_signinn"></activity>
         <activity
             android:name=".MainActivity"
+            android:label="Main ACtivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".VrPanoramicView.tampilan360" />
+        <activity android:name=".DetailWisata.Detail_wisata" />
+        <activity
+            android:name=".Login.activity_signup"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

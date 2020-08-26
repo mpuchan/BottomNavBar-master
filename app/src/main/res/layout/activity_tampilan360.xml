@@ -4,6 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".tampilan360">
+    tools:context=".VrPanoramicView.tampilan360">
+
+    <com.google.vr.sdk.widgets.pano.VrPanoramaView
+        android:id="@+id/pano_view"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
 
 </android.support.constraint.ConstraintLayout>

@@ -1,48 +1,244 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".DetailWisata.Detail_wisata">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width ="match_parent"
+        android:layout_height ="350dp"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+        android:fitsSystemWindows="true"
+        >
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width ="match_parent"
+            android:layout_height ="wrap_content"
+            app:layout_scrollFlags = "scroll|exitUntilCollapsed"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginBottom="64dp"
+            app:expandedTitleTextAppearance="@android:color/transparent"
+            android:fitsSystemWindows="true"
+            >
 
-    <ImageView
-        android:id="@+id/gambar"
+            <ImageView
+                android:id="@+id/gambar"
+                android:layout_width="match_parent"
+                android:layout_height="364dp"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:title="Wisata"
+
+                app:popupTheme="@style/Theme.AppCompat.Light" />
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="191dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/bgbelakang"
+        android:clipToPadding="false"
         android:scaleType="fitXY"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <TextView
-        android:id="@+id/namawisata"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nama Wisata"
-        android:textSize="30dp" />
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="318dp"
-        android:layout_below="@+id/namawisata">
-
-        <TextView
-            android:id="@+id/deskripsi"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Item" />
+            android:orientation="vertical">
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0dp"
+                android:paddingBottom="10dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="5dp">
+
+                <TextView
+                    android:id="@+id/namawisata"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Nama Wisata"
+                    android:textSize="30dp" />
+
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    app:srcCompat="@drawable/ic_location_on_black_24dp" />
+
+                <TextView
+                    android:id="@+id/alamat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Alamat"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    app:cardBackgroundColor="#536DFE"
+                    app:cardCornerRadius="3dp">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="DESKRIPSI WISATA"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="5dp"
+                    app:contentPaddingLeft="5dp"
+                    app:contentPaddingRight="5dp">
+
+                    <TextView
+                        android:id="@+id/deskripsi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='Garuda Wisnu Kencana Cultural Park), disingkat GWK, adalah sebuah taman wisata di bagian selatan pulau Bali. Taman wisata ini terletak di Desa Ungasan, Kecamatan Kuta Selatan, Kabupaten Badung, kira-kira 40 kilometer di sebelah selatan Denpasar, ibu kota provinsi Bali.Di areal taman budaya ini, direncanakan akan didirikan sebuah landmark atau maskot Bali, yakni patung berukuran raksasa Dewa Wisnu yang sedang menunggangi tunggangannya, Garuda, setinggi 120 meter",             "Pantai Kuta adalah sebuah tempat pariwisata yang terletak kecamatan Kuta, sebelah selatan Kota Denpasar, Bali, Indonesia. Daerah ini merupakan sebuah tujuan wisata turis mancanegara dan telah menjadi objek wisata andalan Pulau Bali sejak awal tahun 1970-an. Pantai Kuta sering pula disebut sebagai pantai matahari terbenam (sunset beach) sebagai lawan dari pantai Sanur. Selain itu, Lapangan Udara I Gusti Ngurah Rai terletak tidak jauh dari Kuta",             "Sangeh adalah sebuah tempat pariwisata di pulau Bali yang terletak di Desa Sangeh, Kecamatan Abiansemal, Kabupaten Badung, Bali, Indonesia.\n" +                     "Sangeh terkenal karena merupakan sebuah desa di mana monyet-monyet (beruk) berkeliaran dengan bebas dan dikeramatkan oleh penduduk setempat di sebuah hutan. Di tengah hutan ada pula sebuah pura yang bernama Pura Bukit Sari.Pura ini dibangun oleh Kerajaan Mengwi dan sekarang diserahkan ke penduduk setempat. Monyet di sini memiliki raja dan konon memiliki tiga wilayah kerajaan",             "Pura Taman Ayun merupakan Pura Paibon/Pedarman Raja Mengwi untuk memuja roh leluhur dari raja-raja yang diwujudkan dengan dibangunnya sebuah gedong Paibon, serta dibangun pula meru-meru untuk pemujaan dan persembahyangan kepada para Dewa bagi masyarakat kerajaan Mengwi dalam memohon kesejahteraan. Pura Taman Ayun berlokasi di Kecamatan Mengwi, Badung, Bali, Indonesia. Taman ini beserta Pura Taman Ayun merupakan peninggalan bersejarah dari kerajaan Mengwi.",             "Beachwalk Bali merupakan salah satu mall yang tercantik di bali. dengan dilengkapi design'
+                        android:textAlignment="viewStart" />
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    app:cardBackgroundColor="#536DFE"
+                    app:cardCornerRadius="3dp">
+
+                    <TextView
+                        android:id="@+id/textViedsw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="Tampilan VR360"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imagesample360"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/bg" />
+
+                    <Button
+                        android:id="@+id/button360"
+                        android:layout_width="66dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/ic_camera_black_24dp"
+                        android:text="" />
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:layout_width="140dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginLeft="140dp"
+                        android:src="@drawable/source" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    app:cardBackgroundColor="#536DFE"
+                    app:cardCornerRadius="3dp">
+
+                    <TextView
+                        android:id="@+id/tvkhextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="FEEDBACK"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="5dp"
+                    app:contentPaddingLeft="5dp"
+                    app:contentPaddingRight="5dp">
+
+                    <TextView
+                        android:id="@+id/deskripsij"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="viewStart" />
+
+                    <EditText
+                        android:id="@+id/editText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="Name" />
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
 
 
-    </ScrollView>
-
-    <Button
-        android:id="@+id/button360"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:text="Button" />
 
 
-</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
 
 
